@@ -1,15 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/components/**/*.{ts,tsx}", "./src/app/**/*.{ts,tsx}"],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: "--font-ibm",
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

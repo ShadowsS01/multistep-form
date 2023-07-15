@@ -3,12 +3,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { IBM_Plex_Sans as IBMPlexSans } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const IBMSans = IBMPlexSans({
+const IBMSans = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-ibm",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +17,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={`${IBMSans.variable}`}>{children}</body>
+      <body
+        className={`${IBMSans.className} flex h-screen w-full flex-col items-center justify-center`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
