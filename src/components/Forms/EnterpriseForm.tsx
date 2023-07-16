@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { FormData, StepCompleted } from "../MultiStepForm/MultiStepForm";
-import { useFormContext, type FieldErrors, set } from "react-hook-form";
+import { useFormContext, type FieldErrors } from "react-hook-form";
 
 import { animation } from "./animation";
 import { motion } from "framer-motion";
