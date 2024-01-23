@@ -25,7 +25,7 @@ const formSchema = z.object({
       .min(2, "O nome da empresa deve ter pelo menos 2 caracteres."),
     employeeQuantity: z
       .string()
-      .nonempty("A quantidade de funcionários deve ser informada."),
+      .min(1, "A quantidade de funcionários deve ser informada."),
     about: z.string().min(5, "O sobre deve ter pelo menos 5 caracteres."),
   }),
   project: z.object({
